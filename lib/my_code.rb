@@ -55,8 +55,12 @@ end
 
 def reduce_to_all_true(source_array)
   i = 0 
-  while source_array[i] do 
-    if source_array[i] 
-  return true 
+  for i in source_array  
+    if i 
+      return true  
+    else
+      break 
+    end
   return false 
+end 
 
