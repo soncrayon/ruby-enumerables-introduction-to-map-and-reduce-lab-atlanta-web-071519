@@ -54,13 +54,10 @@ def reduce_to_total(source_array, *starting_point)
 end 
 
 def reduce_to_all_true(source_array)
-  i = 0 
-  for i in source_array  
-    if i 
+  if source_array.all?
       return true  
     else
-      break 
-    end
-  return false 
+      return false 
+  end 
 end 
 
