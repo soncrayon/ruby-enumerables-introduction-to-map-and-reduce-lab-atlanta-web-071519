@@ -39,18 +39,18 @@ def map_to_square(source_array)
   return new_array
 end 
 
-def reduce_to_total(source_array, *starting_point) 
-  if (!starting_point) 
-    array_sum = 0 
-  else 
-    array_sum = starting_point[0] 
-  end
+def reduce_to_total(source_array, *starting_point)  
+  array_sum = 0
   i = 0 
   while source_array[i] do 
     array_sum = array_sum + source_array[i] 
     i += 1 
   end 
-  return array_sum
+  unless starting_point[0]
+    return array_sum
+  else    
+    return array_sum = array_sum + starting_point[0] 
+  end 
 end 
 
 def reduce_to_all_true(source_array)
