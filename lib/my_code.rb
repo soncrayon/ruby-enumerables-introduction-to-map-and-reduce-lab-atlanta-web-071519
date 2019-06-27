@@ -61,19 +61,11 @@ def reduce_to_all_true(source_array)
   end 
 end 
 
-#def reduce_to_all_true(source_array)
-  new_array = [] 
-  for i in source_array  
-    if i == true 
-      new_array.push(i) 
-    else
-      break 
-    end
-  end 
-  if new_array[-1] == source_array[-1]
-    return true 
-  else 
-    puts new_array  
+def reduce_to_any_true(source_array)
+  if source_array.any?
+    return true
+  else
+    return false
   end 
 end 
 
